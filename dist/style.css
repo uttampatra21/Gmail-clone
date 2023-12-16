@@ -1,0 +1,43 @@
+* {
+  list-style-type: none;
+  text-decoration: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+i {
+  font-size: 30px;
+}
+
+#left-bar .inbox {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+}
+#left-bar .inbox:hover {
+  background-color: #292929;
+}
+.flex {
+  display: flex;
+}
+
+.emails-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.emails-list > li {
+  color: #fff;
+}
+
+.emails-list > li > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fade {
+  opacity: 0.6;
+}

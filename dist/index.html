@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="h-[100vh] overflow-hidden bg-black text-white">
+      <nav class="flex justify-between items-center p-5">
+        <div class="flex items-center gap-5">
+          <i class="bx bx-menu"></i>
+          <img
+            width="120"
+            src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_2x_r5.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="search flex gap-2 items-center w-[650px] bg-[#292929] p-2 rounded-full"
+        >
+          <i class="bx bx-search text-2xl" style="color: #ffffff"></i>
+          <input
+            class="bg-transparent w-full outline-none text-xl font-medium tracking-wide"
+            type="text"
+            placeholder="Search mail"
+          />
+        </div>
+        <div class="flex items-center gap-10">
+          <i class="bx bx-question-mark" style="color: #ffffff"></i>
+          <i class="bx bx-cog" style="color: #ffffff"></i>
+
+          <img
+            width="40px"
+            height="40px"
+            class="rounded-full"
+            src="https://avatars.githubusercontent.com/u/108145016?v=4"
+            alt=""
+          />
+        </div>
+      </nav>
+      <div class="flex gap-8">
+        <div class="bg-black w-[20%] h-full">
+          <div
+            class="flex items-center font-medium justify-between py-1.5 px-4 bg-white rounded-full text-black"
+          >
+            <i class="bx bx-pencil"></i>
+            <span class="opacity-60 text-xl">Compose</span>
+          </div>
+          <ul id="left-bar" class="py-5">
+            <li class="inbox flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <i class="bx bx-image-alt"></i>
+                <span class="font-medium">Inbox</span>
+              </div>
+              <span>5,809</span>
+            </li>
+
+            <li class="inbox flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <i class="bx bx-star"></i>
+                <span class="font-medium">Starred</span>
+              </div>
+            </li>
+
+            <li class="inbox flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <i class="bx bx-time-five" style="color: #ffffff"></i>
+                <span class="font-medium">Snoozed</span>
+              </div>
+            </li>
+
+            <li class="inbox flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <i class="bx bx-send" style="color: #ffffff"></i>
+                <span class="font-medium">Sent</span>
+              </div>
+            </li>
+
+            <li class="inbox flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <i class="bx bxs-note"></i>
+                <span class="font-medium">Drafts</span>
+              </div>
+              <span>5</span>
+            </li>
+
+            <li class="inbox flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <i class="bx bx-chevron-down"></i>
+                <span class="font-medium">More</span>
+              </div>
+            </li>
+          </ul>
+
+          <li class="inbox flex items-center justify-between">
+            <span class="text-2xl font-medium tracking-wide pl-4">Label</span>
+            <i class="bx bx-plus" style="color: #ffffff"></i>
+          </li>
+        </div>
+        <!-- -----------HALF----------- -->
+        <!-- -----------HALF----------- -->
+        <div class="bg-[#292929] w-[75%] rounded-2xl p-4 h-full">
+          <div class="email-header flex justify-between items-center">
+            <div class="flex items-center gap-2">
+              <i class="bx bx-checkbox" style="color: #ffffff"></i>
+              <i class="bx bx-refresh" style="color: #ffffff"></i>
+              <i class="bx bx-dots-vertical-rounded" style="color: #ffffff"></i>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[15px]">1-50 of 6,590</span>
+              <div class="flex items-center gap-2">
+                <i class="bx bx-chevron-left" style="color: #ffffff"></i>
+                <i class="bx bx-chevron-right" style="color: #ffffff"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="email-container py-4 flex items-center">
+            <div class="w-[30%] flex gap-2 items-center">
+              <i class="bx bx-image-alt text-xl" style="color: #ffffff"></i>
+              <span class="font-medium tracking-wide">Primary</span>
+            </div>
+
+            <div class="w-[30%] flex gap-2 items-center">
+              <i
+                class="bx text-xl bx-purchase-tag-alt"
+                style="color: #ffffff"
+              ></i>
+              <span class="font-medium tracking-wide"
+                >Promotions
+                <span
+                  class="bg-white text-black text-sm py-[2px] px-[8px] rounded-full"
+                  >50 new</span
+                ></span
+              >
+            </div>
+
+            <div class="w-[30%] flex gap-2 items-center">
+              <img
+                width="28"
+                src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/group_baseline_nv200_20dp.png"
+                alt=""
+              />
+              <span class="font-medium tracking-wide"
+                >Social
+                <span
+                  class="bg-white text-black text-sm py-[2px] px-[8px] rounded-full"
+                  >50 new</span
+                ></span
+              >
+            </div>
+          </div>
+
+          <div class="emails h-full">
+            <ul class="emails-list flex flex-col gap-2 h-[400px] overflow-auto">
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i class="text-2xl bx bx-checkbox" style="color: #ffffff"></i>
+                  <i class="text-2xl bx bx-star" style="color: #ffffff"></i>
+                  <span>Career For Freshers</span>
+                </div>
+                <div class="">
+                  <span
+                    >Here's the letest artical from Carrer For Freshers -
+                    <span class="fade">GE National information</span></span
+                  >
+                </div>
+                <div class="time">10:00</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------HALF----------- -->
+        <!-- -----------HALF----------- -->
+
+        <div class="w-[5%] h-full flex flex-col items-end px-5 gap-10">
+          <img
+            width="40px"
+            height="40px"
+            style="border-radius: 50%; object-fit: cover"
+            src="https://www.gstatic.com/companion/icon_assets/calendar_2020q4_2x.png"
+            alt=""
+          />
+          <img
+            width="40px"
+            height="40px"
+            style="border-radius: 50%; object-fit: cover"
+            src="https://www.gstatic.com/companion/icon_assets/calendar_2020q4_2x.png"
+            alt=""
+          />
+          <img
+            width="40px"
+            height="40px"
+            style="border-radius: 50%; object-fit: cover"
+            src="https://www.gstatic.com/companion/icon_assets/tasks_2021_2x.png"
+            alt=""
+          />
+          <img
+            width="40px"
+            height="40px"
+            style="border-radius: 50%; object-fit: cover"
+            src="https://www.gstatic.com/companion/icon_assets/contacts_2022_2x.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
